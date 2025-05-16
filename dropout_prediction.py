@@ -388,14 +388,9 @@ if st.button("Predict Dropout Probability"):
         prediction_probability = model.predict_proba(input_df)[:, 0]  # Get probability of dropout (class 0)
         predicted_class = "Likely Dropout" if prediction_probability[0] > 0.5 else "Unlikely Dropout"
         st.success(
-            f"Predicted Dropout Probability: {prediction_probability[0]:.2f}  \nPrediction: {predicted_class}"
+            f"Prediction: {predicted_class}  \nPredicted Dropout Probability: {prediction_probability[0]:.2f}"
         )
         
     except Exception as e:
         st.error(f"An error occurred during prediction: {e}")
     # --- End of model prediction section ---
-
-    # For demonstration purposes, display the collected data
-    st.subheader("Input Data:")
-    st.write(input_df)
-
