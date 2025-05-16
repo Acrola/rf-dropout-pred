@@ -128,15 +128,6 @@ curricular_units_2nd_sem_grade = st.number_input("Curricular Units 2nd Sem (Grad
 # Curricular units 2nd sem (without evaluations) (Numerical)
 curricular_units_2nd_sem_without_evaluations = st.number_input("Curricular Units 2nd Sem (Without Evaluations)", min_value=0, value=0, step=1)
 
-# Unemployment rate (Numerical)
-unemployment_rate = st.number_input("Unemployment Rate (%)", min_value=0.0, value=0.0, step=0.1)
-
-# Inflation rate (Numerical)
-inflation_rate = st.number_input("Inflation Rate (%)", min_value=0.0, value=0.0, step=0.1)
-
-# GDP (Numerical)
-gdp = st.number_input("GDP", min_value=0.0, value=0.0, step=0.01)
-
 # --- Demographic Information ---
 st.header("Demographic Information")
 
@@ -332,6 +323,14 @@ tuition_fees_up_to_date = st.radio("Tuition Fees Up to Date", options=[1, 0], fo
 # Scholarship holder (Categorical)
 scholarship_holder = st.radio("Scholarship Holder", options=[1, 0], format_func=lambda x: "Yes" if x == 1 else "No")
 
+# Unemployment rate (Numerical)
+unemployment_rate = st.number_input("Unemployment Rate (%)", min_value=0.0, value=0.0, step=0.1)
+
+# Inflation rate (Numerical)
+inflation_rate = st.number_input("Inflation Rate (%)", min_value=0.0, value=0.0, step=0.1)
+
+# GDP (Numerical)
+gdp = st.number_input("GDP", min_value=0.0, value=0.0, step=0.01)
 
 # --- Create a button to trigger prediction ---
 if st.button("Predict Dropout Probability"):
